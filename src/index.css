@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 #slider img:not(img:first-child){
     display: none;
@@ -13,4 +17,25 @@
 }
 .slider2h h1:not(h1:first-child){
     display: none;
+}
+svg path{
+    fill: black;
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray: 100;
+    animation: textani 3s linear ;
+}
+@keyframes textani{
+    0%{
+        stroke-dashoffset: 100;
+        fill: transparent;
+        
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: black;
+        stroke-dashoffset: 0;
+    }
 }
