@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#slider img:not(img:first-child){
+    display: none;
+}
+.slidertag h1:not(h1:first-child){
+    display: none;
+}
+.sliderhead h1:not(h1:first-child){
+    display: none;
+}
+.slider2h h1:not(h1:first-child){
+    display: none;
+}
