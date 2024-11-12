@@ -48,10 +48,10 @@ function Landingpage({changeBackgroundColor}) {
          </div>
          <button className='bg-zinc-100 my-4 rounded-md text-[1.5vw] p-2 '>See More →</button>
          <div id='slider' className='w-1/2 slider h-3/4 fle overfow-hidden object-contain absolute items-center top-1 bottom-32 right-32'>
-           <img className='object-contain' src="src/assets/airjordan 1.png" alt="" />
-           <img className='object-contain w-3/4 ml-20 mt-20' src="src/assets/new balance.png" alt="" />
-           <img className='object-contain' src="src/assets/yeezy.png" alt="" />
-           <img className='object-contain w-3/4 mt-20 ml-20' src="src/assets/adidas samba.png" alt="" />
+           <img className='object-contain' src="./src/assets/airjordan 1.png" alt="" />
+           <img className='object-contain w-3/4 ml-20 mt-20' src="./src/assets/new balance.png" alt="" />
+           <img className='object-contain' src="./src/assets/yeezy.png" alt="" />
+           <img className='object-contain w-3/4 mt-20 ml-20' src="./src/assets/adidas samba.png" alt="" />
          </div>
          <div className='flex justify-cener mt-20 gap-20 items-cnter'>
          <button onClick={prevHandle}  className='prev text-[3vw] rounded-lg border-zinc-900 border-2 px-6'>‹</button>
