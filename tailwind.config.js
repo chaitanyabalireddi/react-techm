@@ -8,7 +8,7 @@ export default {
     extend: {
             fontFamily: {
               fraktur: ['UnifrakturMaguntia', 'serif'],
-              sans: ['Roboto', 'sans-serif'], 
+              sans: ['Grenze', 'mono'], 
             },
     },
   },

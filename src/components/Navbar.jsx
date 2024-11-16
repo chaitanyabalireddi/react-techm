@@ -1,11 +1,16 @@
 import React from 'react'
+import { useCart } from '../context/CartContext'
 
-function Navbar() {
+
+const Navbar = () => {
+    const { cart, toggleCart } = useCart();
+
+    
     return (
-        <div className='w-full flex py-4 justify-between'>
+        <div className='w-full flex font-sans py-4 justify-between'>
             <div className='flex gap-4 mb-8 ml-10'>
-            <button className='text-[1.5vw] hover:bg-zinc-100 rounded-2xl duration-700'>Menu⇓</button>
-            <button className='text-[1.5vw] hover:bg-zinc-100 rounded-2xl duration-700'>Stock⇓</button>
+            <button className='text-[1.5vw] hover:bg-zinc-100 rounded-2xl duration-700'>Menu</button>
+            <button className='text-[1.5vw] hover:bg-zinc-100 rounded-2xl duration-700'>Stock</button>
             </div>
             <h1 className='text-[2.5vw] font-sans ml-12'>
             <svg width="260" height="95" viewBox="0 0 354 95" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,10 +37,18 @@ function Navbar() {
 </svg>
 
             </h1>
-            <ul className='flex text-[1.5vw] font-light gap-6 mr-20'>
+            <ul className='flex text-[1.5vw] items-center font-light gap-6 mr-20'>
                 <li>Product</li>
                 <li>Contact</li>
-                <li>Cart</li>
+                <button
+        onClick={() => {
+          toggleCart(); // Ensure this function gets triggered.
+          console.log("Cart button clicked!");
+        }}
+        className=""
+      >
+        Cart <span > ({cart.reduce((total, item) => total + item.quantity, 0)})</span>
+      </button>
             </ul>
         </div>
     )

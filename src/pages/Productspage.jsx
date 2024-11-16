@@ -1,8 +1,10 @@
 import React from 'react'
-import { useCart } from '../context/CartContext';
+import { useCart } from '../context/CartContext'
 
 function Productspage() {
-    const { addToCart } = useCart();
+
+  const {addToCart} = useCart();
+    
        const productdata = [
         {
           "id": 1,
@@ -115,13 +117,12 @@ function Productspage() {
             <div className='flex flex-wrap gap-10 mt-52 justify-evenly align-center'>
             {productdata.map((items,index)=>
             
-            <div className='bg-zinc-100 flex flex-col justify-center items-center p-10 rounded-lg hover:bg-zinc-200'>
-                <img className='object-contain' src={items.image} alt="" />
+            <div className='bg-zinc-100/20 w-1/4 flex flex-col justify-center items-center p-10 rounded-lg hover:bg-zinc-200'>
+                <img className='object-contain rounded-lg mb-4' src={items.image} alt="" />
                 <h1 className='text-center text-[1.5vw] font-semibold tracking-none' key={index}>{items.name}</h1>
                 <h1 className='text-[1.2vw] font-bold' key={index}>{items.brand}</h1>
                 <h1 className='text-[1.2vw] font-light font-mono tracking-tight' key={index}>{items.price_in_inr}</h1>
-                <button onClick={()=>addToCart()} className='bg-zinc-100 p-4 mt-4 rounded-lg border-2 border-zinc-900 hover:bg-zinc-900 hover:text-zinc-100 duration-700 '>Add to Cart</button>
-                
+                <button onClick={()=>addToCart(items)} className='bg-zinc-100 p-4 mt-4 rounded-lg border-2 border-zinc-900 hover:bg-zinc-900 hover:text-zinc-100 duration-700 '>Add to Cart</button>
             </div>
             )}
            </div>
