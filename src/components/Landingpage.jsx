@@ -4,6 +4,7 @@ import adidas from '../assets/adidas samba.png'
 import yeezy from '../assets/yeezy.png'
 import newbalance from '../assets/new balance.png'
 
+
 function Landingpage({changeBackgroundColor}) {
 
   function sliderhandle(){
